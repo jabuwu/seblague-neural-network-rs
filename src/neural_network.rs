@@ -6,7 +6,6 @@ pub struct NeuralNetwork {
     pub layers: Vec<Layer>,
     pub layer_sizes: Vec<usize>,
     pub cost: Cost,
-    pub rng: Box<dyn RngCore>,
 }
 
 impl NeuralNetwork {
@@ -23,7 +22,6 @@ impl NeuralNetwork {
             layers,
             layer_sizes: layer_sizes.clone(),
             cost: Cost::MeanSquareError,
-            rng,
         }
     }
 
